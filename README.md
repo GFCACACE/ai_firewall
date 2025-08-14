@@ -2,6 +2,8 @@
 
 ## Functionalities
 
+[] Input and Output controls
+
 [] UX: User can configure parameters and active modules that they decide... the more functionalities, the more slow it gets
 
 [] Quality: Multiple tests processed in parallel.
