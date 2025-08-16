@@ -3,6 +3,8 @@ import helmet from '@fastify/helmet';
 import cors from '@fastify/cors';
 import { loadConfig } from './config/loader.js';
 import type { FirewallConfig } from './types/index.js';
+import { pino } from 'pino';
+import 'pino-pretty'; // Ensure this is imported
 
 const config: FirewallConfig = loadConfig();
 
