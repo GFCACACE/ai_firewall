@@ -1,0 +1,3 @@
+{"level":30,"time":1755364181912,"pid":70571,"hostname":"b8254b2a18d6","msg":"Server listening at http://0.0.0.0:3000"}
+{"level":30,"time":1755364194162,"pid":70571,"hostname":"b8254b2a18d6","reqId":"req-1","req":{"method":"GET","url":"/health","hostname":"localhost:3000","remoteAddress":"127.0.0.1","remotePort":57934},"msg":"incoming request"}
+{"level":30,"time":1755364194165,"pid":70571,"hostname":"b8254b2a18d6","reqId":"req-1","res":{"statusCode":200},"responseTime":2.9355849996209145,"msg":"request completed"}

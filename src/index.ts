@@ -10,14 +10,26 @@ const config: FirewallConfig = loadConfig();
 
 const fastify = Fastify({
   logger: {
-    level: 'info',
-    transport: {
-      target: 'pino-pretty',
-      options: {
-        colorize: true
+      level: 'info',
+      transport: {
+        targets: [
+          {
+            target: 'pino-pretty',
+            options: { colorize: true },
+            level: 'info'
+          },
+          {
+            target: 'pino/file',
+            options: { 
+              destination: './logs/server.log',
+              mkdir: true
+
+             },
+            level: 'info'
+          }
+        ]
       }
     }
-  }
 });
 
 // Security middleware
