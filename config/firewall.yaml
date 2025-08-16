@@ -1,0 +1,33 @@
+server:
+  port: 3000
+  host: "0.0.0.0"
+
+modules:
+  inputOutputControls: true
+  promptProtection: true
+  contextProtection: false  # Disable expensive ML by default
+  logging: true
+
+redis:
+  host: "localhost"
+  port: 6379
+  # password: "your-redis-password"
+
+database:
+  host: "localhost"
+  port: 5432
+  database: "ai_firewall"
+  username: "postgres"
+  password: "postgres"
+
+# Security rules
+rules:
+  maxContentLength: 10000
+  blockedPatterns:
+    - "(?i)(ignore|disregard).*(previous|above|system)"
+    - "(?i)developer.?mode"
+    - "(?i)admin.?(password|key|secret)"
+  
+  # Character limits for prompt protection
+  maxConsecutiveSpecialChars: 10
+  maxRepeatedChars: 20
